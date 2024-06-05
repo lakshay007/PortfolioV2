@@ -7,18 +7,21 @@
             icon: "fa-solid fa-cart-shopping",
             description:
                 "QNexus is a gamified educational platform, designed to blend fun and learning into a seamless experience. It is built with SvelteKit, TailwindCSS, and Firebase/Firestore.",
+            href: "https://github.com/lakshay007/Qnexus",
         },
         {
             name: "AgeEase",
             icon: "fa-solid fa-list-check",
             description:
-                "AgeEase, a web application designed to cater to the needs of elderly individuals, providing features that enhance their daily lives. AgeEase focuses on reddit like community engagement, medicine reminders, a voice chatbot, and virtual doctor appointments.",
+                "AgeEase, a web application designed to cater to the needs of elderly individuals(hosted on vercel), providing features that enhance their daily lives. AgeEase focuses on reddit like community engagement, medicine reminders, a voice chatbot, and virtual doctor appointments.",
+            href: "https://age-ease.vercel.app",
         },
         {
             name: "BookMyCeleb",
             icon: "fa-solid fa-diagram-project",
             description:
                 "Platform used to book celebrities for college events",
+            href: "https://github.com/lakshay007/DBSProject",
         },
     ];
 
@@ -111,7 +114,7 @@
             </Step>
             <Step step={steps[1]}>
                 <p>
-                    AgeEase, a web application(desktop) designed to cater to the needs of elderly individuals, providing features that enhance their daily lives. AgeEase focuses on reddit like community engagement,medicine reminders, a voice chatbot, and virtual doctor appointments. It is built using <strong
+                    AgeEase(hosted on vercel), a web application(desktop) designed to cater to the needs of elderly individuals, providing features that enhance their daily lives. AgeEase focuses on reddit like community engagement,medicine reminders, a voice chatbot, and virtual doctor appointments. It is built using <strong
                         class="text-violet-400">SvelteKit,TailwindCSS and NodeJS+ExpressJS+MongoDB</strong
                     >
                 </p>
