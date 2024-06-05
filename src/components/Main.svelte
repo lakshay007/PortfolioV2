@@ -54,7 +54,7 @@
             class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10"
         >
             <h2 class="font-semibold text-4xl sm:text-5xl md:text-6xl">
-                Hi! I'm <span class="poppins text-violet-400">Lakshay</span> Chauhan
+                Hi! I'm <span class="poppins text-violet-400">Lakshay</span> 
                 <br />
             </h2>
             <p class="text-base sm:text-lg md:text-xl">
