@@ -124,7 +124,7 @@
                     BookMyCeleb is a <strong class="text-violet-400"
                         >SvelteKit,TailwindCSS and NodeJS+ExpressJS+MySQL</strong
                     >
-                    web applicatio, it is used to book celebrities for college events.
+                    web application, it is used to book celebrities for college events.
                     It was Database management system project.
                 
                 </p>
