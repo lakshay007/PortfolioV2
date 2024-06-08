@@ -58,7 +58,7 @@
                 <br />
             </h2>
             <p class="text-base sm:text-lg md:text-xl">
-                I dabble between AI and development. In the AI realm, I'm particularly interested in computer vision, motion planning, and biomedical imaging. On the development side, I specialize in full-stack development using JavaScript (React.JS or SvelteKit), TailwindCSS, Node.js + Express.js, and databases like PostgreSQL,MongoDB or Firebase/Firestore!
+                I dabble between AI and development. In the AI realm, I'm particularly interested in <span class="poppins text-violet-400">computer vision, motion planning, and biomedical imaging</span>. On the development side, I specialize in full-stack development using <span class="poppins text-violet-400">JavaScript (React.JS or SvelteKit), TailwindCSS, Node.js + Express.js</span>, and databases like PostgreSQL,MongoDB or Firebase/Firestore!
                 
             </p>
             <button
