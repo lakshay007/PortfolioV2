@@ -74,7 +74,7 @@
             <img
                 src={"images/386745.jpg"}
                 alt="Zetane Engine"
-                class="object-cover z-[2] max-h-[70vh]"
+                class="object-cover z-[2] max-h-[70vh] rounded-3xl"
             />
         </div>
         <!-- <div  class="flex p-0.5 relative max-w-[700px] w-full mx-auto">
