@@ -33,7 +33,7 @@
                 "Problem solving is at the core of everything I do. Whether it's figuring out the best algorithm for computer vision tasks, optimizing biomedical imaging processes, or solving challenging coding problems in online competitions, I thrive on tackling challenging problems and finding efficient, elegant solutions.",
         },
         {
-            name: "a ML enthusiast",
+            name: "an ML enthusiast",
             description:
                 "I have a strong passion for machine learning and artificial intelligence. I have worked as research intern at Indian Institute of Science(Bangalore) at AI and robotics park, I've also worked as an Undergraduate researcher at my college MIT Manipal. I am always eager to learn more and apply my knowledge to real-world problems.",
         },
