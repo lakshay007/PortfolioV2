@@ -1,26 +1,64 @@
 <script>
+    import { onMount } from 'svelte';
     import Step from "./Step.svelte";
+    import Swiper from 'swiper';
+    import { Navigation, Pagination } from 'swiper/modules';
+    
+    import 'swiper/swiper-bundle.css';
+
+    let swiper;
+    
+    onMount(() => {
+        swiper = new Swiper('.mySwiper', {
+            modules: [Navigation, Pagination],
+            spaceBetween: 30,
+            slidesPerView: 1,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+            }
+        });
+    });
 
     let steps = [
+        {
+            name: "Testify",
+            icon: "fa-solid fa-comments",
+            description:
+                "Testify is a modern, flexible solution for businesses to gather and manage customer feedback. It offers <strong>customizable forms</strong>, <strong>multi-language support</strong>, and <strong>rich media integration</strong>. This platform simplifies the process of collecting authentic testimonials, helping businesses showcase their value through the voices of their satisfied customers.",
+            href: "https://testify.tech",
+        },
         {
             name: "Qnexus",
             icon: "fa-solid fa-cart-shopping",
             description:
-                "QNexus is a gamified educational platform, designed to blend fun and learning into a seamless experience. It is built with SvelteKit, TailwindCSS, and Firebase/Firestore.",
+                "QNexus is a <strong>gamified educational platform</strong>, designed to blend fun and learning into a seamless experience. It is built with <strong>SvelteKit</strong>, <strong>TailwindCSS</strong>, and <strong>Firebase/Firestore</strong>.",
             href: "https://github.com/lakshay007/Qnexus",
         },
         {
             name: "AgeEase",
             icon: "fa-solid fa-list-check",
             description:
-                "AgeEase, a web application designed to cater to the needs of elderly individuals(hosted on vercel), providing features that enhance their daily lives. AgeEase focuses on reddit like community engagement, medicine reminders, a voice chatbot, and virtual doctor appointments.",
+                "AgeEase, a web application designed to cater to the needs of elderly individuals (hosted on vercel), providing features that enhance their daily lives. AgeEase focuses on <strong>reddit-like community engagement</strong>, <strong>medicine reminders</strong>, <strong>voice chatbot</strong>, and <strong>virtual doctor appointments</strong>.",
             href: "https://age-ease.vercel.app",
         },
         {
             name: "BookMyCeleb",
             icon: "fa-solid fa-diagram-project",
             description:
-                "Platform used to book celebrities for college events",
+                "Platform used to <strong>book celebrities for college events</strong>. Built with <strong>SvelteKit</strong>, <strong>TailwindCSS</strong>, and <strong>NodeJS + ExpressJS + MySQL</strong>.",
             href: "https://github.com/lakshay007/DBSProject",
         },
     ];
@@ -103,32 +141,23 @@
             </h3>
         </div>
        
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
-            <Step step={steps[0]}>
-                <p>
-                    QNexus is a gamified educational platform, designed to blend fun and learning into a seamless experience. It is built with <strong
-                        class="text-violet-400"
-                        >SvelteKit,TailwindCSS and Firebase/Firestore</strong
-                    > 
-                </p>
-            </Step>
-            <Step step={steps[1]}>
-                <p>
-                    AgeEase(hosted on vercel), a web application(desktop) designed to cater to the needs of elderly individuals, providing features that enhance their daily lives. AgeEase focuses on reddit like community engagement,medicine reminders, a voice chatbot, and virtual doctor appointments. It is built using <strong
-                        class="text-violet-400">SvelteKit,TailwindCSS and NodeJS+ExpressJS+MongoDB</strong
-                    >
-                </p>
-            </Step>
-            <Step step={steps[2]}>
-                <p>
-                    BookMyCeleb is a <strong class="text-violet-400"
-                        >SvelteKit,TailwindCSS and NodeJS+ExpressJS+MySQL</strong
-                    >
-                    web application, it is used to book celebrities for college events.
-                    It was Database management system project.
-                
-                </p>
-            </Step>
+        <div class="w-full">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    {#each steps as step}
+                        <div class="swiper-slide">
+                            <Step {step}>
+                                <p>
+                                    {@html step.description}
+                                </p>
+                            </Step>
+                        </div>
+                    {/each}
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
         </div>
     </section>
     <section
@@ -183,3 +212,33 @@
         <!-- <p class="mx-auto">So why not invest?</p> -->
     </section>
 </main>
+
+<style>
+    :global(.swiper-button-next),
+    :global(.swiper-button-prev) {
+        color: rgb(167 139 250) !important;
+    }
+
+    :global(.swiper-pagination-bullet-active) {
+        background: rgb(167 139 250) !important;
+    }
+
+    :global(.swiper) {
+        padding: 2rem !important;
+    }
+
+    :global(.swiper-slide) {
+        height: auto !important;
+    }
+
+    :global(.swiper-slide > *) {
+        height: 100%;
+    }
+
+    :global(.card) {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 400px; /* Adjust this value as needed */
+    }
+</style>
